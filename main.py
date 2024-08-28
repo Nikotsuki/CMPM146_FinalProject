@@ -1,4 +1,5 @@
 from htn_planner import load_breeding_data, decompose_task
+import sys
 
 def main():
     # Load the breeding data
@@ -7,6 +8,8 @@ def main():
     # Test the decompose_task function
     pets_we_have = ["Lifmunk", "Cattiva"]  # Example of pets we currently have
     desired_pet = "Vixy"  # The pet we want to breed
+
+    #sys.setrecursionlimit(20000)
     
     # Decompose the task to see the required breeding steps
     tasks = decompose_task(desired_pet, breeding_data, pets_we_have)
